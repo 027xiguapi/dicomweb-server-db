@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+config/*.json
+couchdb-data
+.idea
+yarn.lock
+
+# pouchdb.js
+chronicle
+config.json

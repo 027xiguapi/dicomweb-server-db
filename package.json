@@ -1,0 +1,61 @@
+{
+  "name": "dicomweb-server-db",
+  "version": "0.0.1",
+  "description": "Lightweight DICOMweb Server with Pouchdb",
+  "repository": "https://github.com/027xiguapi/dicomweb-server-db",
+  "main": "server.js",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "dcmjs": "0.24.9",
+    "express": "^4.18.1",
+    "express-pouchdb": "^4.2.0",
+    "fastify": "^3.29.1",
+    "fastify-basic-auth": "^2.3.0",
+    "fastify-cors": "^6.1.0",
+    "fastify-couchdb": "^0.2.0",
+    "fastify-plugin": "^4.2.1",
+    "fastify-static": "^4.7.0",
+    "fs-extra": "^10.1.0",
+    "http": "0.0.0",
+    "keycloak-backend": "^2.0.1",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "nano": "^10.0.0",
+    "p-queue": "^6.6.2",
+    "pouchdb": "^7.3.0",
+    "split2": "^4.1.0",
+    "to-array-buffer": "^3.2.0",
+    "underscore": "^1.13.4",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^10.0.0",
+    "prettier": "2.7.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "pretest": "eslint --ignore-path .gitignore --ignore-path .eslintignore .",
+    "test": "set NODE_ENV=test mocha --timeout 10000",
+    "lint": "eslint -c .eslintrc.json --fix . && prettier --write *.js",
+    "test_basic": "set NODE_ENV=test.auth.basic mocha testAuth/basicAuthTest.js --timeout 10000",
+    "test_oidc": "set NODE_ENV=test.auth.oidc mocha testAuth/oidcAuthTest.js --timeout 10000"
+  },
+  "keywords": [
+    "DICOMweb",
+    "PACS",
+    "server",
+    "CouchDB"
+  ],
+  "author": "027xiguapi",
+  "license": "ISC"
+}
